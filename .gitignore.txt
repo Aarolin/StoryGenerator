@@ -1,0 +1,61 @@
+# **Файлы сборки Visual Studio**
+.vs/
+*.suo
+*.user
+*.cache
+*.log
+*.tlog
+*.VC.db
+*.VC.VC.opendb
+*.pdb
+*.ilk
+*.ipch
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.exp
+*.ncb
+*.idb
+*.aps
+*.iobj
+*.ipdb
+*.rsp
+*.pch
+
+# **Файлы PyCharm**
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+
+# **Файлы venv (виртуальное окружение Python)**
+venv/
+env/
+*.egg-info/
+
+# **Файлы CMake**
+CMakeFiles/
+CMakeCache.txt
+build/
+Makefile
+cmake_install.cmake
+
+# **Логи и временные файлы**
+*.log
+*.tmp
+
+# **Архивы и бинарники**
+*.zip
+*.tar.gz
+*.7z
+
+# **Файлы настроек ОС**
+Thumbs.db
+desktop.ini
+
+# **Git файлы (необходимы только локально)**
+.gitignore
