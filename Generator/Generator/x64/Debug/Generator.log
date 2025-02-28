@@ -1,0 +1,3 @@
+﻿  FileManager.cpp
+D:\StoryGenerator\Generator\FileManager.cpp(29,11): warning C4244: инициализация: преобразование "unsigned short" в "char", возможна потеря данных
+  Generator.vcxproj -> D:\StoryGenerator\Generator\x64\Debug\Generator.exe

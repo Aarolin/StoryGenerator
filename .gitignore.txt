@@ -26,6 +26,7 @@
 
 # **Файлы PyCharm**
 .idea/
+idea/
 __pycache__/
 *.pyc
 *.pyo
