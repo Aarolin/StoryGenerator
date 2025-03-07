@@ -1,7 +1,8 @@
 #pragma once
 
+
+#include "FileParser.h"
 #include "Relationship.h"
-#include "Word.h"
 #include "WordDictionary.h"
 
 #include <iostream>
@@ -16,8 +17,8 @@
 class FileManager {
 public:
 	
-	std::vector<Relationship> readFile(const std::string& filename, WordDictionary& dict) const;
-	std::vector<Relationship> readFile(const std::filesystem::path p, WordDictionary& dict) const;
+	std::vector<Relationship> readFile(const std::string& filename, WordDictionary& dict);
+	std::vector<Relationship> readFile(const std::filesystem::path p, WordDictionary& dict);
 	
 	void writeFile(const std::string& filename, const std::string& data) const;
 
@@ -32,6 +33,11 @@ private:
 	std::wstring readSecondWord(std::wifstream& fileReader) const;
 	int readFrequency(std::wifstream& fileReader) const;
 
-	void skipSpacesInLine(std::wifstream& fileReader) const;
-	bool isNumSymbol(wchar_t ch) const;
+	WordTense readWordTense(std::wifstream& fileReader) const;
+
+	// Ћишние символы - пробелы и табул€ци€
+	void skipExtraCharsInLine(std::wifstream& fileReader) const;
+
+	FileParser parser_;
+
 };

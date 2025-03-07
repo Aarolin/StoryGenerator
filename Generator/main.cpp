@@ -10,8 +10,6 @@
 
 int main(int argc, char* argv[]) {
 
-	std::setlocale(LC_ALL, "ru_RU.utf8");
-	std::locale::global(std::locale("ru_RU.utf8"));
 
 	WordDictionary dict;
 	FileManager fileManager;

@@ -2,54 +2,58 @@
 
 #include "FileManager.h"
 
-std::vector<Relationship> FileManager::readFile(const std::string& filename, WordDictionary& dict) const
+std::vector<Relationship> FileManager::readFile(const std::string& filename, WordDictionary& dict)
 {
 	std::filesystem::path p(filename);
 	return readFile(p, dict);
 }
 
-std::vector<Relationship> FileManager::readFile(const std::filesystem::path p, WordDictionary& dict) const
+std::vector<Relationship> FileManager::readFile(const std::filesystem::path p, WordDictionary& dict)
 {
-	std::locale ru("ru-RU");
-	std::wifstream fileReader(p);
-	fileReader.imbue(ru);
+	parser_.setFilePath(p);
 
-	if (!fileReader.is_open()) {
-		throw("File didn't open");
-	}
-
-	WordCategory firstPairType = WordCategory::NONE;
-	WordCategory secondPairType = WordCategory::NONE;
-
-	bool firstPairTypeIsReady = false;
-	bool stringAfterPairTypeSkipped = false;
 	std::vector<Relationship> result;
 
-	while (!fileReader.eof()) {
-		char ch = fileReader.get();
-		if (ch == '<') {
+	while (!parser_.eof()) {
 
-			firstPairType = getPairType(fileReader);
-			goNextPairType(fileReader);
-			secondPairType = getPairType(fileReader);
+		//if (ch == '<') {
 
-			// we need to go to the next line
-			fileReader.get();
+		//	firstPairType = getPairType(fileReader);
+		//	goNextPairType(fileReader);
+		//	secondPairType = getPairType(fileReader);
+		//	fileReader.get();
 
-			skipFileLine(fileReader);
+		//	skipFileLine(fileReader);
 
-			// if the line starts with a space character then we have reached the end of the current category.
-			while (fileReader.peek() != ' ') {
-				// fixed sequence: read the first word -> read the second word -> read the frequency -> go to the next line
-				std::wstring firstWord = readFirstWord(fileReader);
-				std::wstring secondWord = readSecondWord(fileReader);
-				int frequency = readFrequency(fileReader);
-				auto firstWordPtr = dict.intern(firstWord, firstPairType);
-				auto secondWordPtr = dict.intern(secondWord, secondPairType);
-				result.push_back(Relationship(firstWordPtr, secondWordPtr, frequency));
-			}
+		//	// Если строка начинается с символа переноса строки, тогда перед нами окончание текущей пары категорий.
+		//	while (fileReader.peek() != '\n') {
 
-		}
+		//		// Фиксированная последовательность действий: считываем первое слово -> затем второе -> время ко второму, если оно есть -> частоту к паре слов.
+		//		std::wstring firstWord = readFirstWord(fileReader);
+		//		if (firstWord.empty()) {
+		//			break;
+		//		}
+		//		std::wstring secondWord = readSecondWord(fileReader);
+		//		WordTense secondWordTense = WordTense::PRESENT;
+
+		//		if (secondPairType == WordCategory::ACTION) {
+		//			secondWordTense = readWordTense(fileReader);
+		//		}
+
+		//		int frequency = readFrequency(fileReader);
+
+		//		// На месте первой категории всегда стоят слова существительные, которые по умолчанию 
+		//		// являются словами в настоящем времени.
+		//		auto firstWordPtr = dict.intern(firstWord, firstPairType);
+
+		//		// Глаголы всегда будут стоять на месте второй категории в паре категорий, поэтому явное считывание 
+		//		// времени слова может пригодиться только тут.
+		//		auto secondWordPtr = dict.intern(secondWord, secondPairType, secondWordTense);
+
+		//		result.push_back(Relationship(firstWordPtr, secondWordPtr, frequency));
+		//	}
+
+		//}
 	}
 
 	return result;
@@ -77,7 +81,7 @@ WordCategory FileManager::getPairType(std::wifstream& fileReader) const
 		return WordCategory::LOC;
 	}
 	else if (category == L"Действие") {
-		WordCategory::ACTION;
+		return WordCategory::ACTION;
 	}
 		
 	return WordCategory::ORG;
@@ -88,6 +92,7 @@ void FileManager::goNextPairType(std::wifstream& fileReader) const
 	while (fileReader.peek() != '<') {
 		fileReader.get();
 	}
+	fileReader.get();
 }
 
 void FileManager::skipFileLine(std::wifstream& fileReader) const
@@ -98,7 +103,6 @@ void FileManager::skipFileLine(std::wifstream& fileReader) const
 		ch = fileReader.get();
 	}
 
-	fileReader.get();
 }
 
 std::wstring FileManager::readFirstWord(std::wifstream& fileReader) const
@@ -106,57 +110,77 @@ std::wstring FileManager::readFirstWord(std::wifstream& fileReader) const
 	std::wstring firstWord = L"";
 	wchar_t ch = fileReader.get();
 
-	while (ch != ':') {
+	while (ch != ':' && !fileReader.eof()) {
 		firstWord += ch;
 		ch = fileReader.get();
 	}
-
-	firstWord.pop_back();
+	if (!firstWord.empty()) {
+		firstWord.pop_back();
+	}
 	return firstWord;
 }
 
 std::wstring FileManager::readSecondWord(std::wifstream& fileReader) const
 {
-	skipSpacesInLine(fileReader);
+	skipExtraCharsInLine(fileReader);
 
 	std::wstring secondWord = L"";
-	wchar_t ch = fileReader.peek();
+	wchar_t ch = fileReader.get();
 
-	while (!isNumSymbol(ch)) {
-		fileReader.get();
+	while (ch != '\t') {
 		secondWord += ch;
-		ch = fileReader.peek();
+		ch = fileReader.get();
+		if (ch == '(') {
+			secondWord.pop_back();
+			break;
+		}
 	}
 
-	secondWord.pop_back();
 	return secondWord;
 }
 
 int FileManager::readFrequency(std::wifstream& fileReader) const
 {
-	skipSpacesInLine(fileReader);
+	skipExtraCharsInLine(fileReader);
 
 	std::wstring frequency = L"";
 	wchar_t ch = fileReader.get();
 
 	while (ch != ' ' and ch != '\n') {
 		frequency += ch;
+		ch = fileReader.get();
 	}
 
 	return std::stoi(frequency);
 }
 
-void FileManager::skipSpacesInLine(std::wifstream& fileReader) const
+WordTense FileManager::readWordTense(std::wifstream& fileReader) const
+{
+	skipExtraCharsInLine(fileReader);
+	std::wstring tense = L"";
+	wchar_t ch = fileReader.get();
+
+	while (ch != ')') {
+		tense += ch;
+		ch = fileReader.get();
+	}
+
+	if (tense == L"прошедшее") {
+		return WordTense::PAST;
+	}
+	else if (tense == L"будущее") {
+		return WordTense::FUTURE;
+	}
+
+	return WordTense::PRESENT;
+}
+
+void FileManager::skipExtraCharsInLine(std::wifstream& fileReader) const
 {
 	wchar_t ch = fileReader.peek();
-	while (ch == ' ' or ch == ':') {
+	while (ch == ' ' or ch == ':' or ch == '\t') {
 		fileReader.get();
 		ch = fileReader.peek();
 	}
-
 }
 
-bool FileManager::isNumSymbol(wchar_t ch) const
-{
-	return ch >= 48 && ch <= 57;
-}

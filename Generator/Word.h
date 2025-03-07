@@ -9,10 +9,16 @@ enum class WordCategory {
 	ACTION
 };
 
+enum class WordTense {
+	PAST,
+	PRESENT,
+	FUTURE
+};
+
 class Word {
 public:
 
-	Word(const std::wstring& text, WordCategory category);
+	Word(const std::wstring& text, WordCategory category, WordTense tense = WordTense::PRESENT);
 
 	const std::wstring& getText() const;
 	WordCategory getCategory() const;
@@ -21,6 +27,7 @@ public:
 private:
 	std::wstring text_;
 	WordCategory category_;
+	WordTense tense_;
 };
 
 // ”ниверсальный хешер дл€ Word и указателей на Word.

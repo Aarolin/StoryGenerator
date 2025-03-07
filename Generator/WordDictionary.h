@@ -7,7 +7,7 @@
 class WordDictionary {
 public:
 	WordDictionary();
-	const Word* intern(const std::wstring& text, WordCategory category);
+	const Word* intern(const std::wstring& text, WordCategory category, WordTense tense = WordTense::PRESENT);
 
 private:
 	std::unordered_set<Word, WordHash> words_;

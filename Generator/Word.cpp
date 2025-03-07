@@ -1,6 +1,6 @@
 #include "Word.h"
 
-Word::Word(const std::wstring& text, WordCategory category) : text_(text), category_(category)
+Word::Word(const std::wstring& text, WordCategory category, WordTense tense) : text_(text), category_(category), tense_(tense)
 {
 }
 

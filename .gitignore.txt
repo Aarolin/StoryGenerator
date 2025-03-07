@@ -1,62 +1,14 @@
-# **Файлы сборки Visual Studio**
-.vs/
-*.suo
-*.user
-*.cache
-*.log
-*.tlog
-*.VC.db
-*.VC.VC.opendb
-*.pdb
-*.ilk
-*.ipch
-*.obj
-*.o
-*.exe
-*.dll
-*.lib
-*.exp
-*.ncb
-*.idb
-*.aps
-*.iobj
-*.ipdb
-*.rsp
-*.pch
-
-# **Файлы PyCharm**
+# Игнорировать папку .idea (файлы настройки IDE)
 .idea/
-idea/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.DS_Store
 
-# **Файлы venv (виртуальное окружение Python)**
-venv/
-env/
-*.egg-info/
+# Игнорировать папку texts (содержит исходные тексты)
+texts/
 
-# **Файлы CMake**
-CMakeFiles/
-CMakeCache.txt
-build/
-Makefile
-cmake_install.cmake
+# Игнорировать проектные файлы Visual Studio в папке Generator
+Generator/*.sln
+Generator/*.vcxproj
+Generator/*.vcxproj.filters
+Generator/*.vcxproj.user
+Generator/*.vcproj
 
-# **Логи и временные файлы**
-*.log
-*.tmp
-
-# **Архивы и бинарники**
-*.zip
-*.tar.gz
-*.7z
-
-# **Файлы настроек ОС**
-Thumbs.db
-desktop.ini
-
-# **Git файлы (необходимы только локально)**
-.gitignore
+Generator/*/

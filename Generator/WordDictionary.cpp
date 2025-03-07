@@ -4,14 +4,15 @@ WordDictionary::WordDictionary()
 {
 }
 
-const Word* WordDictionary::intern(const std::wstring& text, WordCategory category)
+const Word* WordDictionary::intern(const std::wstring& text, WordCategory category, WordTense tense)
 {
-	Word temp(text, category);
+	Word temp(text, category, tense);
 
 	auto it = words_.find(temp);
 
 	if (it == words_.end()) {
-		words_.insert(temp);
+		auto insertOperation = words_.insert(temp);
+		return &(*insertOperation.first);
 	}
 
 	return &(*it);
