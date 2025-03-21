@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 
 #include "FileParser.h"
@@ -23,20 +23,6 @@ public:
 	void writeFile(const std::string& filename, const std::string& data) const;
 
 private:
-
-	WordCategory getPairType(std::wifstream& fileReader) const;
-	void goNextPairType(std::wifstream& fileReader) const;
-
-	void skipFileLine(std::wifstream& fileReader) const;
-
-	std::wstring readFirstWord(std::wifstream& fileReader) const;
-	std::wstring readSecondWord(std::wifstream& fileReader) const;
-	int readFrequency(std::wifstream& fileReader) const;
-
-	WordTense readWordTense(std::wifstream& fileReader) const;
-
-	// Лишние символы - пробелы и табуляция
-	void skipExtraCharsInLine(std::wifstream& fileReader) const;
 
 	FileParser parser_;
 

@@ -1,4 +1,4 @@
-#pragma once
+пїњ#pragma once
 
 #include "FileManager.h"
 
@@ -16,44 +16,29 @@ std::vector<Relationship> FileManager::readFile(const std::filesystem::path p, W
 
 	while (!parser_.eof()) {
 
-		//if (ch == '<') {
+		auto categoryLine = parser_.readCategoryLine();
+		WordCategory leftWordsCategory = categoryLine.leftWordsCategory;
+		WordCategory rightWordsCategory = categoryLine.rightWordsCategory;
 
-		//	firstPairType = getPairType(fileReader);
-		//	goNextPairType(fileReader);
-		//	secondPairType = getPairType(fileReader);
-		//	fileReader.get();
+		while (!parser_.isEndOfCategory()) {
+			try {
+				auto parsedRecord = parser_.readWordsLine(leftWordsCategory, rightWordsCategory);
+				if (!parsedRecord.success) {
+					break;
+				}
 
-		//	skipFileLine(fileReader);
+				auto firstWordPtr = dict.intern(parsedRecord.firstWord, leftWordsCategory);
+				auto secondWordPtr = dict.intern(parsedRecord.secondWord, rightWordsCategory, parsedRecord.secondWordTense);
 
-		//	// ≈сли строка начинаетс€ с символа переноса строки, тогда перед нами окончание текущей пары категорий.
-		//	while (fileReader.peek() != '\n') {
+				result.push_back(Relationship(firstWordPtr, secondWordPtr, parsedRecord.frequency));
+			}
+			catch (std::out_of_range& rangeError) {
+				std::cerr << rangeError.what();
+				continue;
+			}
+		}
 
-		//		// ‘иксированна€ последовательность действий: считываем первое слово -> затем второе -> врем€ ко второму, если оно есть -> частоту к паре слов.
-		//		std::wstring firstWord = readFirstWord(fileReader);
-		//		if (firstWord.empty()) {
-		//			break;
-		//		}
-		//		std::wstring secondWord = readSecondWord(fileReader);
-		//		WordTense secondWordTense = WordTense::PRESENT;
-
-		//		if (secondPairType == WordCategory::ACTION) {
-		//			secondWordTense = readWordTense(fileReader);
-		//		}
-
-		//		int frequency = readFrequency(fileReader);
-
-		//		// Ќа месте первой категории всегда сто€т слова существительные, которые по умолчанию 
-		//		// €вл€ютс€ словами в насто€щем времени.
-		//		auto firstWordPtr = dict.intern(firstWord, firstPairType);
-
-		//		// √лаголы всегда будут сто€ть на месте второй категории в паре категорий, поэтому €вное считывание 
-		//		// времени слова может пригодитьс€ только тут.
-		//		auto secondWordPtr = dict.intern(secondWord, secondPairType, secondWordTense);
-
-		//		result.push_back(Relationship(firstWordPtr, secondWordPtr, frequency));
-		//	}
-
-		//}
+		parser_.setNextCategory();
 	}
 
 	return result;
@@ -64,123 +49,4 @@ void FileManager::writeFile(const std::string& filename, const std::string& data
 
 }
 
-WordCategory FileManager::getPairType(std::wifstream& fileReader) const
-{
-	std::wstring category;
-	wchar_t ch = fileReader.get();
-
-	while (ch != '>') {
-		category += ch;
-		ch = fileReader.get();
-	}
-
-	if (category == L"ѕерсонаж") {
-		return WordCategory::PER;
-	}
-	else if (category == L"Ћокаци€") {
-		return WordCategory::LOC;
-	}
-	else if (category == L"ƒействие") {
-		return WordCategory::ACTION;
-	}
-		
-	return WordCategory::ORG;
-}
-
-void FileManager::goNextPairType(std::wifstream& fileReader) const
-{
-	while (fileReader.peek() != '<') {
-		fileReader.get();
-	}
-	fileReader.get();
-}
-
-void FileManager::skipFileLine(std::wifstream& fileReader) const
-{
-	wchar_t ch = fileReader.get();
-
-	while (ch != '\n') {
-		ch = fileReader.get();
-	}
-
-}
-
-std::wstring FileManager::readFirstWord(std::wifstream& fileReader) const
-{
-	std::wstring firstWord = L"";
-	wchar_t ch = fileReader.get();
-
-	while (ch != ':' && !fileReader.eof()) {
-		firstWord += ch;
-		ch = fileReader.get();
-	}
-	if (!firstWord.empty()) {
-		firstWord.pop_back();
-	}
-	return firstWord;
-}
-
-std::wstring FileManager::readSecondWord(std::wifstream& fileReader) const
-{
-	skipExtraCharsInLine(fileReader);
-
-	std::wstring secondWord = L"";
-	wchar_t ch = fileReader.get();
-
-	while (ch != '\t') {
-		secondWord += ch;
-		ch = fileReader.get();
-		if (ch == '(') {
-			secondWord.pop_back();
-			break;
-		}
-	}
-
-	return secondWord;
-}
-
-int FileManager::readFrequency(std::wifstream& fileReader) const
-{
-	skipExtraCharsInLine(fileReader);
-
-	std::wstring frequency = L"";
-	wchar_t ch = fileReader.get();
-
-	while (ch != ' ' and ch != '\n') {
-		frequency += ch;
-		ch = fileReader.get();
-	}
-
-	return std::stoi(frequency);
-}
-
-WordTense FileManager::readWordTense(std::wifstream& fileReader) const
-{
-	skipExtraCharsInLine(fileReader);
-	std::wstring tense = L"";
-	wchar_t ch = fileReader.get();
-
-	while (ch != ')') {
-		tense += ch;
-		ch = fileReader.get();
-	}
-
-	if (tense == L"прошедшее") {
-		return WordTense::PAST;
-	}
-	else if (tense == L"будущее") {
-		return WordTense::FUTURE;
-	}
-
-	return WordTense::PRESENT;
-}
-
-void FileManager::skipExtraCharsInLine(std::wifstream& fileReader) const
-{
-	wchar_t ch = fileReader.peek();
-	while (ch == ' ' or ch == ':' or ch == '\t') {
-		fileReader.get();
-		ch = fileReader.peek();
-	}
-}
 
