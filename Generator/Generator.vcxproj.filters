@@ -18,7 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FileManager.cpp">
+    <ClCompile Include="BookManager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Word.cpp">
@@ -30,12 +30,27 @@
     <ClCompile Include="WordDictionary.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FileParser.cpp">
+    <ClCompile Include="BookParser.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateManager.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="StoryGenerator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateParser.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="json.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FileManager.h">
+    <ClInclude Include="BookManager.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="Word.h">
@@ -47,7 +62,22 @@
     <ClInclude Include="WordDictionary.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="FileParser.h">
+    <ClInclude Include="BookParser.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateManager.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="StoryGenerator.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateParser.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="json.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
   </ItemGroup>

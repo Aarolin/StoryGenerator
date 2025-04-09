@@ -35,6 +35,26 @@ const std::vector<RelationshipEntry>& RelationshipIndex::getEntries(const Word* 
 	return it->second;
 }
 
+RelationshipIndex::iterator RelationshipIndex::begin()
+{
+	return index_.begin();
+}
+
+RelationshipIndex::const_iterator RelationshipIndex::cbegin() const
+{
+	return index_.cbegin();
+}
+
+RelationshipIndex::iterator RelationshipIndex::end()
+{
+	return index_.end();
+}
+
+RelationshipIndex::const_iterator RelationshipIndex::cend() const
+{
+	return index_.cend();
+}
+
 Relationship::Relationship(const Word* left, const Word* right, int frequency) : left_(left), right_(right), frequency_(frequency)
 {
 

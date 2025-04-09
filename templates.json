@@ -1,0 +1,180 @@
+﻿[
+  [
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "HERO_NAME",
+      "index_usage": 1
+    },
+    {
+      "token_type": "TEXT",
+      "value": " с самого рождения был неуклюжим. Посудите сами, когда ему было "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "RANDOM_INTEGER",
+      "index_usage": 1
+    },
+    {
+      "token_type": "TEXT",
+      "value": " лет, утром он отправился в "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "LOCATION_NAME",
+      "index_usage": 1
+    },
+    {
+      "token_type": "TEXT",
+      "value": ", где его ждали друзья "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "HERO_NAME",
+      "index_usage": 2
+    },
+    {
+      "token_type": "TEXT",
+      "value": ", "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "HERO_NAME",
+      "index_usage": 3
+    },
+    {
+      "token_type": "TEXT",
+      "value": ", "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "HERO_NAME",
+      "index_usage": 4
+    },
+    {
+      "token_type": "TEXT",
+      "value": ". В то утро друзья решили "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "ACTION",
+      "index_usage": 1,
+      "tense": "PRESENT"
+    },
+    {
+      "token_type": "TEXT",
+      "value": " прямо в "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "ORGANIZATION",
+      "index_usage": 1
+    },
+    {
+      "token_type": "TEXT",
+      "value": ". Так как "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "ACTION",
+      "index_usage": 1,
+      "tense": "PRESENT"
+    },
+    {
+      "token_type": "TEXT",
+      "value": " требовало специальных навыков, друзья решили тянуть жребий. Выполнять "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "ACTION",
+      "index_usage": 1,
+      "tense": "PRESENT"
+    },
+    {
+      "token_type": "TEXT",
+      "value": " должен был тот, кто вытянет короткую спичку. Естественно исполнителем был назначен наш герой. В самый ответственный момент, когда нужно было действовать быстро и незаметно он заметил "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "HERO_NAME",
+      "index_usage": 5
+    },
+    {
+      "token_type": "TEXT",
+      "value": ", который мог принести нашему герою много неприятностей в случае обнаружения. "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "HERO_NAME",
+      "index_usage": 1
+    },
+    {
+      "token_type": "TEXT",
+      "value": " решил укрыться в "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "LOCATION_NAME",
+      "index_usage": 2
+    },
+    {
+      "token_type": "TEXT",
+      "value": " расположенной рядом с "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "LOCATION_NAME",
+      "index_usage": 3
+    },
+    {
+      "token_type": "TEXT",
+      "value": " внутри "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "LOCATION_NAME",
+      "index_usage": 1
+    },
+    {
+      "token_type": "TEXT",
+      "value": ". У этой истории мог бы быть счастливый конец, если бы не способность нашего героя "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "ACTION",
+      "index_usage": 2,
+      "tense": "PRESENT"
+    },
+    {
+      "token_type": "TEXT",
+      "value": " в самые ответственные моменты своей жизни. Очень жаль, но "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "HERO_NAME",
+      "index_usage": 5
+    },
+    {
+      "token_type": "TEXT",
+      "value": " раскрыл "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "HERO_NAME",
+      "index_usage": 1
+    },
+    {
+      "token_type": "TEXT",
+      "value": " и решил наказать заставить его делать "
+    },
+    {
+      "token_type": "PLACEHOLDER",
+      "placeholder_type": "ACTION",
+      "index_usage": 3,
+      "tense": "PRESENT"
+    },
+    {
+      "token_type": "TEXT",
+      "value": " в качестве наказания."
+    }
+  ]
+]

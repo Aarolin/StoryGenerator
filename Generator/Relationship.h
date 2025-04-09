@@ -32,11 +32,19 @@ private:
 
 class RelationshipIndex {
 public:
+	using iterator = std::unordered_map<const Word*, std::vector<RelationshipEntry>>::iterator;
+	using const_iterator = std::unordered_map<const Word*, std::vector<RelationshipEntry>>::const_iterator;
 
 	RelationshipIndex();
 
 	void addEntry(const Word* key, const Word* partner, int frequency);
 	const std::vector<RelationshipEntry>& getEntries(const Word* key) const;
+
+	iterator begin();
+	const_iterator cbegin() const;
+
+	iterator end();
+	const_iterator cend() const;
 
 private:
 	std::unordered_map<const Word*, std::vector<RelationshipEntry>, WordHash, WordPtrEqual> index_;

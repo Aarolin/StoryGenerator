@@ -129,17 +129,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FileManager.cpp" />
-    <ClCompile Include="FileParser.cpp" />
+    <ClCompile Include="DataManager.cpp" />
+    <ClCompile Include="BookManager.cpp" />
+    <ClCompile Include="BookParser.cpp" />
+    <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Relationship.cpp" />
+    <ClCompile Include="StoryGenerator.cpp" />
+    <ClCompile Include="TemplateManager.cpp" />
+    <ClCompile Include="TemplateParser.cpp" />
     <ClCompile Include="Word.cpp" />
     <ClCompile Include="WordDictionary.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FileManager.h" />
-    <ClInclude Include="FileParser.h" />
+    <ClInclude Include="DataManager.h" />
+    <ClInclude Include="BookManager.h" />
+    <ClInclude Include="BookParser.h" />
+    <ClInclude Include="json.h" />
     <ClInclude Include="Relationship.h" />
+    <ClInclude Include="StoryGenerator.h" />
+    <ClInclude Include="TemplateManager.h" />
+    <ClInclude Include="TemplateParser.h" />
     <ClInclude Include="Word.h" />
     <ClInclude Include="WordDictionary.h" />
   </ItemGroup>

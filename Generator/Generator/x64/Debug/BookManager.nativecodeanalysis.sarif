@@ -1,0 +1,75 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.41.34120.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///d:/storygenerator/generator/bookmanager.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "6768518785984ad2805d3e8f3dba9011b05fa8b3e04cf9e9f33264b98f1b659b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/storygenerator/generator/bookmanager.h"
+          },
+          "hashes": {
+            "sha-256": "ac9d44cbde03dbc8d4ac39818b8dbf69a1f2c86aceb3e4c2955065af68bec4ad"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/storygenerator/generator/bookparser.h"
+          },
+          "hashes": {
+            "sha-256": "fbd2fab133badee573c4da8a7e75f4018220f298e2a495fb949b0f3631920e8f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/storygenerator/generator/word.h"
+          },
+          "hashes": {
+            "sha-256": "9a7e9fffbdaca030090ef6b04310f02a6d2143ff9e5e680c193a1b54b23237e6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/storygenerator/generator/relationship.h"
+          },
+          "hashes": {
+            "sha-256": "1bc49ea8100bfac7cfbb0c1bf168ba4b61df428729586104a296f029852eab8a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/storygenerator/generator/worddictionary.h"
+          },
+          "hashes": {
+            "sha-256": "332d2f04a9081e96c516677b87b5b147596ee3396cc6f943214b62ec9edd36a0"
+          }
+        }
+      ]
+    }
+  ]
+}

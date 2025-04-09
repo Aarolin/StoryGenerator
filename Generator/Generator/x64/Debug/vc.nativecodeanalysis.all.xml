@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>D:\StoryGenerator\Generator\</FILEPATH>
+      <FILENAME>BookParser.h</FILENAME>
+      <LINE>39</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Переменная "BookParser::ParsedRecord::frequency" не инициализирована. Всегда инициализируйте переменную-член (type.6).</DESCRIPTION>
+    <FUNCTION>BookParser::ParsedRecord::{ctor}</FUNCTION>
+    <DECORATED>??0ParsedRecord@BookParser@@QEAA@XZ</DECORATED>
+    <FUNCLINE>39</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>BookParser::ParsedRecord::frequency</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

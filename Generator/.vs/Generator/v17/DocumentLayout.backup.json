@@ -3,40 +3,79 @@
   "WorkspaceRootPath": "D:\\StoryGenerator\\Generator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\FileParser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:FileParser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\TemplateParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:TemplateParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\FileParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:FileParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\json.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:json.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\json.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:json.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\TemplateParser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:TemplateParser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\WordDictionary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:WordDictionary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\StoryGenerator\\templates.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\WordDictionary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:WordDictionary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\BookParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:BookParser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\Relationship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:Relationship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\Relationship.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:Relationship.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\Relationship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:Relationship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\BookManager.cpp||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:BookManager.cpp||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\TemplateManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:TemplateManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\TemplateManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:TemplateManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\StoryGenerator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:StoryGenerator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\DataManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:DataManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\DataManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:DataManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\BookParser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:BookParser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\WordDictionary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:WordDictionary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\WordDictionary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:WordDictionary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\StoryGenerator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|solutionrelative:StoryGenerator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{724CB8EE-11A9-4935-98DB-F1AE2A1717B2}|Generator.vcxproj|D:\\StoryGenerator\\Generator\\Word.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -54,64 +93,218 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FileParser.cpp",
-              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\FileParser.cpp",
-              "RelativeDocumentMoniker": "FileParser.cpp",
-              "ToolTip": "D:\\StoryGenerator\\Generator\\FileParser.cpp",
-              "RelativeToolTip": "FileParser.cpp",
-              "ViewState": "AgIAADgAAAAAAAAAAAAiwEwAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "json.cpp",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\json.cpp",
+              "RelativeDocumentMoniker": "json.cpp",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\json.cpp",
+              "RelativeToolTip": "json.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T10:06:06.744Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-04-08T12:01:19.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "json.h",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\json.h",
+              "RelativeDocumentMoniker": "json.h",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\json.h",
+              "RelativeToolTip": "json.h",
+              "ViewState": "AgIAACIAAAAAAAAAAAAYwDcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-08T12:01:12.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "templates.json",
+              "DocumentMoniker": "D:\\StoryGenerator\\templates.json",
+              "RelativeDocumentMoniker": "..\\templates.json",
+              "ToolTip": "D:\\StoryGenerator\\templates.json",
+              "RelativeToolTip": "..\\templates.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T10:13:58.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TemplateParser.h",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\TemplateParser.h",
+              "RelativeDocumentMoniker": "TemplateParser.h",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\TemplateParser.h",
+              "RelativeToolTip": "TemplateParser.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-01T11:25:11.375Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FileParser.h",
-              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\FileParser.h",
-              "RelativeDocumentMoniker": "FileParser.h",
-              "ToolTip": "D:\\StoryGenerator\\Generator\\FileParser.h",
-              "RelativeToolTip": "FileParser.h",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAAAKcAAAAKAAAAAAAAAA==",
+              "Title": "TemplateParser.cpp",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\TemplateParser.cpp",
+              "RelativeDocumentMoniker": "TemplateParser.cpp",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\TemplateParser.cpp",
+              "RelativeToolTip": "TemplateParser.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-01T11:24:57.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BookManager.cpp",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\BookManager.cpp",
+              "RelativeDocumentMoniker": "BookManager.cpp",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\BookManager.cpp",
+              "RelativeToolTip": "BookManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-08T11:14:41.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TemplateManager.h",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\TemplateManager.h",
+              "RelativeDocumentMoniker": "TemplateManager.h",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\TemplateManager.h",
+              "RelativeToolTip": "TemplateManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-26T12:44:10.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TemplateManager.cpp",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\TemplateManager.cpp",
+              "RelativeDocumentMoniker": "TemplateManager.cpp",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\TemplateManager.cpp",
+              "RelativeToolTip": "TemplateManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-26T12:43:57.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StoryGenerator.h",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\StoryGenerator.h",
+              "RelativeDocumentMoniker": "StoryGenerator.h",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\StoryGenerator.h",
+              "RelativeToolTip": "StoryGenerator.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-26T12:44:45.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "StoryGenerator.cpp",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\StoryGenerator.cpp",
+              "RelativeDocumentMoniker": "StoryGenerator.cpp",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\StoryGenerator.cpp",
+              "RelativeToolTip": "StoryGenerator.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-26T12:44:30.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DataManager.h",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\DataManager.h",
+              "RelativeDocumentMoniker": "DataManager.h",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\DataManager.h",
+              "RelativeToolTip": "DataManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-24T12:04:29.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DataManager.cpp",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\DataManager.cpp",
+              "RelativeDocumentMoniker": "DataManager.cpp",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\DataManager.cpp",
+              "RelativeToolTip": "DataManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-24T12:04:12.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Relationship.h",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\Relationship.h",
+              "RelativeDocumentMoniker": "Relationship.h",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\Relationship.h",
+              "RelativeToolTip": "Relationship.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-18T12:39:40.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Relationship.cpp",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\Relationship.cpp",
+              "RelativeDocumentMoniker": "Relationship.cpp",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\Relationship.cpp",
+              "RelativeToolTip": "Relationship.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-18T12:39:45.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BookParser.h",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\BookParser.h",
+              "RelativeDocumentMoniker": "BookParser.h",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\BookParser.h",
+              "RelativeToolTip": "BookParser.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-05T10:05:58.907Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FileManager.cpp",
-              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\FileManager.cpp",
-              "RelativeDocumentMoniker": "FileManager.cpp",
-              "ToolTip": "D:\\StoryGenerator\\Generator\\FileManager.cpp",
-              "RelativeToolTip": "FileManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAApAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "BookParser.cpp",
+              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\BookParser.cpp",
+              "RelativeDocumentMoniker": "BookParser.cpp",
+              "ToolTip": "D:\\StoryGenerator\\Generator\\BookParser.cpp",
+              "RelativeToolTip": "BookParser.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAnwEEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-14T07:29:41.661Z",
+              "WhenOpened": "2025-03-05T10:06:06.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FileManager.h",
-              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\FileManager.h",
-              "RelativeDocumentMoniker": "FileManager.h",
-              "ToolTip": "D:\\StoryGenerator\\Generator\\FileManager.h",
-              "RelativeToolTip": "FileManager.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-14T07:25:43.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "WordDictionary.cpp",
               "DocumentMoniker": "D:\\StoryGenerator\\Generator\\WordDictionary.cpp",
               "RelativeDocumentMoniker": "WordDictionary.cpp",
@@ -124,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "WordDictionary.h",
               "DocumentMoniker": "D:\\StoryGenerator\\Generator\\WordDictionary.h",
               "RelativeDocumentMoniker": "WordDictionary.h",
@@ -137,33 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Relationship.h",
-              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\Relationship.h",
-              "RelativeDocumentMoniker": "Relationship.h",
-              "ToolTip": "D:\\StoryGenerator\\Generator\\Relationship.h",
-              "RelativeToolTip": "Relationship.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-18T12:39:40.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Relationship.cpp",
-              "DocumentMoniker": "D:\\StoryGenerator\\Generator\\Relationship.cpp",
-              "RelativeDocumentMoniker": "Relationship.cpp",
-              "ToolTip": "D:\\StoryGenerator\\Generator\\Relationship.cpp",
-              "RelativeToolTip": "Relationship.cpp",
-              "ViewState": "AgIAABEAAAAAAAAAAAAiwCUAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-18T12:39:45.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "Word.cpp",
               "DocumentMoniker": "D:\\StoryGenerator\\Generator\\Word.cpp",
               "RelativeDocumentMoniker": "Word.cpp",
@@ -175,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "Word.h",
               "DocumentMoniker": "D:\\StoryGenerator\\Generator\\Word.h",
               "RelativeDocumentMoniker": "Word.h",
@@ -183,8 +350,7 @@
               "RelativeToolTip": "Word.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-18T12:32:56.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T12:32:56.799Z"
             },
             {
               "$type": "Document",
@@ -194,7 +360,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "D:\\StoryGenerator\\Generator\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-14T07:25:24.556Z",
               "EditorCaption": ""

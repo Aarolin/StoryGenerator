@@ -1,7 +1,5 @@
-﻿  FileManager.cpp
-  FileParser.cpp
-D:\StoryGenerator\Generator\FileParser.cpp(79,10): warning C4244: инициализация: преобразование "unsigned short" в "char", возможна потеря данных
-D:\StoryGenerator\Generator\FileParser.cpp(82,23): warning C4244: =: преобразование "unsigned short" в "char", возможна потеря данных
+﻿  TemplateParser.cpp
+  json.cpp
   main.cpp
   Создание кода...
   Generator.vcxproj -> D:\StoryGenerator\Generator\x64\Debug\Generator.exe

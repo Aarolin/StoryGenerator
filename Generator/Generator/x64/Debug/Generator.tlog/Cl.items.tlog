@@ -1,6 +1,11 @@
-D:\StoryGenerator\Generator\FileManager.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\FileManager.obj
-D:\StoryGenerator\Generator\FileParser.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\FileParser.obj
+D:\StoryGenerator\Generator\DataManager.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\DataManager.obj
+D:\StoryGenerator\Generator\BookManager.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\BookManager.obj
+D:\StoryGenerator\Generator\BookParser.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\BookParser.obj
+D:\StoryGenerator\Generator\json.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\json.obj
 D:\StoryGenerator\Generator\main.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\main.obj
 D:\StoryGenerator\Generator\Relationship.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\Relationship.obj
+D:\StoryGenerator\Generator\StoryGenerator.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\StoryGenerator.obj
+D:\StoryGenerator\Generator\TemplateManager.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\TemplateManager.obj
+D:\StoryGenerator\Generator\TemplateParser.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\TemplateParser.obj
 D:\StoryGenerator\Generator\Word.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\Word.obj
 D:\StoryGenerator\Generator\WordDictionary.cpp;D:\StoryGenerator\Generator\Generator\x64\Debug\WordDictionary.obj
