@@ -27,14 +27,58 @@ namespace json {
 		using variant::variant;
 		using Value = variant;
 
+		bool isArray() const {
+			return std::holds_alternative<Array>(*this);
+		}
+
+		Array& asArray() {
+
+			if (!isArray()) {
+				throw std::logic_error("Node is not an array!");
+			}
+
+			return std::get<Array>(*this);
+		}
+
+		const Array& asArray() const {
+
+			if (!isArray()) {
+				throw std::logic_error("Node is not an array!");
+			}
+
+			return std::get<Array>(*this);
+		}
+
+		bool isDict() const {
+			return std::holds_alternative<Dict>(*this);
+		}
+
+		Dict asDict() {
+
+			if (!isDict) {
+				throw std::logic_error("Node is not a dict!");
+			}
+
+			return std::get<Dict>(*this);
+		}
+
+		const Dict& asDict() const {
+
+			if (!isDict) {
+				throw std::logic_error("Node is not a dict!");
+			}
+
+			return std::get<Dict>(*this);
+		}
+
 		bool isString() const {
 			return std::holds_alternative<std::wstring>(*this);
 		}
 
-		const std::wstring& AsString() const {
+		const std::wstring& asString() const {
 
 			if (!isString()) {
-				throw std::logic_error("Node is not a string");
+				throw std::logic_error("Node is not a string!");
 			}
 
 			return std::get<std::wstring>(*this);
@@ -45,8 +89,15 @@ namespace json {
 		}
 
 		int asInt() const {
+
+			if (!isInt()) {
+				throw std::logic_error("Node is not an integer!");
+			}
+
 			return std::get<int>(*this);
 		}
+
+
 
 	};
 

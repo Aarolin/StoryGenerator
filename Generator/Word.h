@@ -12,7 +12,8 @@ enum class WordCategory {
 enum class WordTense {
 	PAST,
 	PRESENT,
-	FUTURE
+	FUTURE,
+	NONE
 };
 
 class Word {

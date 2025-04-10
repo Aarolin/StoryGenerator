@@ -44,7 +44,7 @@ json::Node json::loadDict(std::wifstream& input) {
 	for (wchar_t c; input >> c && c != '}';) {
 
 		if (c == '"') {
-			std::wstring key = loadString(input).AsString();
+			std::wstring key = loadString(input).asString();
 
 			if (input >> c and c == ':') {
 
@@ -84,15 +84,7 @@ json::Node json::loadInt(std::wifstream& input) {
 
 	std::wstring parsedNum;
 	std::getline(input, parsedNum);
-	/*while (input.peek() != '\n') {
-		if (std::iswdigit(input.peek())) {
-			parsedNum += static_cast<wchar_t>(input.get());
-		}
-		else {
-			input.get();
-		}
-	}*/
-
+	
 	try {
 		int num = std::stoi(parsedNum);
 		return num;
