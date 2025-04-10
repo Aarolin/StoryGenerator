@@ -1,0 +1,14 @@
+# Игнорировать папку .idea (файлы настройки IDE)
+.idea/
+
+# Игнорировать папку texts (содержит исходные тексты)
+texts/
+
+# Игнорировать проектные файлы Visual Studio в папке Generator
+Generator/*.sln
+Generator/*.vcxproj
+Generator/*.vcxproj.filters
+Generator/*.vcxproj.user
+Generator/*.vcproj
+
+Generator/**/
