@@ -55,7 +55,7 @@ namespace json {
 
 		Dict asDict() {
 
-			if (!isDict) {
+			if (!isDict()) {
 				throw std::logic_error("Node is not a dict!");
 			}
 
@@ -64,7 +64,7 @@ namespace json {
 
 		const Dict& asDict() const {
 
-			if (!isDict) {
+			if (!isDict()) {
 				throw std::logic_error("Node is not a dict!");
 			}
 

@@ -20,27 +20,28 @@ void TemplateParser::openFile(const std::filesystem::path p)
 	fileReader_.imbue(loc);
 }
 
-TemplateParser::Template TemplateParser::readFile() {
+std::vector<TemplateParser::Template> TemplateParser::readFile() {
 
 	using namespace json;
-	using Template = TemplateParser::Template;
-	using TokenTypeMap = TemplateParser::TokenTypeMap;
-
+	
 	Node root = loadNode(fileReader_);
 
 	const Array& templatesNodes = root.asArray();
-	TokenTypeMap tokenTypesMatching = getTokenTypeMap();
-	Template newTemplate;
+	std::vector<Template> templates;
 
 	for (const auto& templateNode : templatesNodes) {
 
+		Template newTemplate;
 		const Array& templateTokens = templateNode.asArray();
 
 		for (const auto& tokenNode : templateTokens) {
 
 			const Dict& tokenObject = tokenNode.asDict();
 
-			TokenType tokensType = tokenTypesMatching[tokenObject.at(tokenTypeKey_).asString()];
+			const auto& tokenTypeKey = TOKEN_KEYS_MAP.at(L"tokenType");
+			const auto& txtTokenType = tokenObject.at(tokenTypeKey).asString();
+
+			TokenType tokensType = TOKEN_TYPE_MAP.at(txtTokenType);
 
 			if (tokensType == TokenType::PLACEHOLDER) {
 				newTemplate.push_back(createPlaceholderToken(tokenObject));
@@ -52,9 +53,10 @@ TemplateParser::Template TemplateParser::readFile() {
 				throw std::runtime_error("Undefined token's type!");
 			}
 		}
+		templates.push_back(std::move(newTemplate));
 	}
 
-	return newTemplate;
+	return templates;
 }
 
 
@@ -63,7 +65,31 @@ TemplateParser::~TemplateParser()
 
 }
 
-TemplateParser::TokenTypeMap TemplateParser::getTokenTypeMap() const
+PlaceholderToken TemplateParser::createPlaceholderToken(const json::Dict& tokenObject) const
+{
+	size_t indexUsage = tokenObject.at(TOKEN_KEYS_MAP.at(L"indexUsage")).asInt();
+
+	const std::wstring& txtPlaceHolderType = tokenObject.at(TOKEN_KEYS_MAP.at(L"placeholderType")).asString();
+	PlaceholderType plcType = PLACEHOLDER_TYPE_MAP.at(txtPlaceHolderType);
+
+	WordTense tense = WordTense::PRESENT;
+	if (tokenObject.count(TOKEN_KEYS_MAP.at(L"tense")) == 1) {
+		const std::wstring& txtTense = tokenObject.at(TOKEN_KEYS_MAP.at(L"tense")).asString();
+		tense = WORD_TENSE_MAP.at(txtTense);
+	}
+
+	return PlaceholderToken(indexUsage, plcType, tense);
+}
+
+TextToken TemplateParser::createTextToken(const json::Dict& tokenObject) const
+{
+
+	const std::wstring& text = tokenObject.at(TOKEN_KEYS_MAP.at(L"textValue")).asString();
+
+	return TextToken(text);
+}
+
+TokenTypeMap getTokenTypeMap()
 {
 	TokenTypeMap tokenMap;
 
@@ -73,13 +99,28 @@ TemplateParser::TokenTypeMap TemplateParser::getTokenTypeMap() const
 	return tokenMap;
 }
 
-PlaceholderToken TemplateParser::createPlaceholderToken(const json::Dict& tokenObject) const
+TokenKeysMap getTokenKeysMap()
 {
+	TokenKeysMap keysMap;
 
-	return PlaceholderToken();
+	keysMap[L"tokenType"] = L"token_type";
+	keysMap[L"placeholderType"] = L"placeholder_type";
+	keysMap[L"indexUsage"] = L"index_usage";
+	keysMap[L"tense"] = L"tense";
+	keysMap[L"textValue"] = L"value";
+
+	return keysMap;
 }
 
-TextToken TemplateParser::createTextToken(const json::Dict& tokenObject) const
+PlaceholderTypeMap getPlaceholderTypeMap()
 {
-	return TextToken();
+	PlaceholderTypeMap placeholderTypeMap;
+
+	placeholderTypeMap[L"HERO_NAME"] = PlaceholderType::HERO_NAME;
+	placeholderTypeMap[L"ACTION"] = PlaceholderType::ACTION;
+	placeholderTypeMap[L"LOCATION_NAME"] = PlaceholderType::LOCATION_NAME;
+	placeholderTypeMap[L"ORGANIZATION"] = PlaceholderType::ORGANIZATION;
+	placeholderTypeMap[L"RANDOM_INTEGER"] = PlaceholderType::RANDOM_INTEGER;
+
+	return placeholderTypeMap;
 }

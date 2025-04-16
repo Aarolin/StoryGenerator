@@ -1,5 +1,7 @@
 #pragma once
-#include<string>
+
+#include <string>
+#include <unordered_map>
 
 enum class WordCategory {
 	NONE,
@@ -15,6 +17,8 @@ enum class WordTense {
 	FUTURE,
 	NONE
 };
+
+using TenseMap = std::unordered_map<std::wstring, WordTense>;
 
 class Word {
 public:
@@ -55,3 +59,7 @@ struct WordPtrEqual {
 		return a->getText() == b->getText() && a->getCategory() == b->getCategory();
 	}
 };
+
+TenseMap getTenseMap();
+
+const TenseMap WORD_TENSE_MAP = getTenseMap();

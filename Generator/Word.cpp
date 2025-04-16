@@ -19,7 +19,13 @@ bool Word::operator==(const Word& other) const
 	return text_ == other.text_ && category_ == other.category_;
 }
 
+TenseMap getTenseMap()
+{
+	TenseMap wordTenseMap;
 
+	wordTenseMap[L"PRESENT"] = WordTense::PRESENT;
+	wordTenseMap[L"FUTURE"] = WordTense::FUTURE;
+	wordTenseMap[L"PAST"] = WordTense::PAST;
 
-
-
+	return wordTenseMap;
+}

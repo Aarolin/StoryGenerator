@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Word.h"
+#include <variant>
 
 enum class TokenType {
 	PLACEHOLDER,
@@ -17,17 +18,7 @@ enum class PlaceholderType {
 	NONE
 };
 
-class TemplateToken {
-public:
-	TemplateToken(TokenType type);
-
-	TokenType getType() const;
-
-private:
-	TokenType type_;
-};
-
-class PlaceholderToken : public TemplateToken {
+class PlaceholderToken {
 public:
 	PlaceholderToken();
 	PlaceholderToken(size_t indexUsage, PlaceholderType placeholderType, WordTense tense);
@@ -43,7 +34,7 @@ private:
 
 };
 
-class TextToken : public TemplateToken {
+class TextToken {
 public:
 	TextToken();
 	TextToken(std::wstring text);

@@ -1,9 +1,10 @@
 #pragma once
 
 #include "BookManager.h"
-#include "WordDictionary.h"
 #include "DataManager.h"
-#include "TemplateParser.h"
+#include "StoryGenerator.h"
+#include "TemplateManager.h"
+#include "WordDictionary.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -12,18 +13,21 @@
 
 int main(int argc, char* argv[]) {
 
+	using Template = TemplateParser::Template;
 
 	WordDictionary dict;
 	BookManager fileManager;
 	std::string dataFileName(argv[1]);
 
-	auto wordsRelationships = fileManager.readFile(dataFileName, dict);
+	const std::vector<Relationship> wordsRelationships = fileManager.readFile(dataFileName, dict);
 	DataManager dataManager(wordsRelationships);
 
 	std::string templateFileName(argv[2]);
-	std::filesystem::path tmpPath(templateFileName);
-	TemplateParser tmpParser(tmpPath);
-	tmpParser.readFile();
+	TemplateManager tmpManager(templateFileName);
+
+	StoryGenerator generator(dataManager, tmpManager);
+
+	std::wstring story = generator.generateStory();
 
 	return 0;
 }

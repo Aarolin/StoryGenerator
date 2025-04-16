@@ -1,5 +1,7 @@
 #pragma once
 
+#include "TemplateParser.h"
+
 #include <iostream>
 #include <filesystem>
 #include <fstream>
@@ -11,10 +13,17 @@
 
 class TemplateManager {
 public:
+	using Template = TemplateParser::Template;
+
 	TemplateManager();
+	TemplateManager(const std::string& path);
+
+	const std::vector<Template>& getTemplateList() const;
+
 	~TemplateManager();
 
 private:
-
+	TemplateParser parser_;
+	std::vector<Template> templateList_;
 };
 

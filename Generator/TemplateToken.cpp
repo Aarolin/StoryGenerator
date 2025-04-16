@@ -1,21 +1,13 @@
 #include "TemplateToken.h"
 
-TemplateToken::TemplateToken(TokenType type) : type_(type)
+PlaceholderToken::PlaceholderToken() : placeholderType_(PlaceholderType::NONE), tense_(WordTense::NONE)
 {
 }
 
-TokenType TemplateToken::getType() const
+PlaceholderToken::PlaceholderToken(size_t indexUsage, PlaceholderType placeholderType, WordTense tense) : indexUsage_(indexUsage), 
+                                                                                                          placeholderType_(placeholderType), tense_(tense)
 {
-    return type_;
-}
 
-PlaceholderToken::PlaceholderToken() : TemplateToken(TokenType::PLACEHOLDER), placeholderType_(PlaceholderType::NONE), tense_(WordTense::NONE)
-{
-}
-
-PlaceholderToken::PlaceholderToken(size_t indexUsage, PlaceholderType placeholderType, WordTense tense) : 
-    TemplateToken(TokenType::PLACEHOLDER), indexUsage_(indexUsage), placeholderType_(placeholderType), tense_(tense)
-{
 }
 
 PlaceholderType PlaceholderToken::getPlaceholderType() const
@@ -30,15 +22,15 @@ size_t PlaceholderToken::getIndex() const
 
 WordTense PlaceholderToken::getTense() const
 {
-    return WordTense();
+    return tense_;
 }
 
-TextToken::TextToken() : TemplateToken(TokenType::TEXT)
+TextToken::TextToken()
 {
 
 }
 
-TextToken::TextToken(std::wstring text) : TemplateToken(TokenType::TEXT), value_(std::move(text))
+TextToken::TextToken(std::wstring text) : value_(std::move(text))
 {
 }
 

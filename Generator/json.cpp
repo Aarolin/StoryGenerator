@@ -71,22 +71,17 @@ json::Node json::loadDict(std::wifstream& input) {
 json::Node json::loadString(std::wifstream& input) {
 
 	std::wstring result;
-	wchar_t c;
-
-	while (input >> c and c != '"') {
-		result += c;
-	}
+	wchar_t terminate = '"';
+	std::getline(input, result, terminate);
 
 	return result;
 }
 
 json::Node json::loadInt(std::wifstream& input) {
-
-	std::wstring parsedNum;
-	std::getline(input, parsedNum);
 	
 	try {
-		int num = std::stoi(parsedNum);
+		int num;
+		input >> num;
 		return num;
 	}
 	catch (...) {
