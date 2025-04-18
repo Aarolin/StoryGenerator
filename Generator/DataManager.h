@@ -1,6 +1,8 @@
 #pragma once
+
 #include "Relationship.h"
 #include "Word.h"
+
 #include <algorithm>
 #include <vector>
 

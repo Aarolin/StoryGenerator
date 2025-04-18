@@ -11,28 +11,39 @@ public:
 	using Template = TemplateParser::Template;
 
 	StoryGenerator(const DataManager& dataManager, const TemplateManager& templateManager);
-	std::wstring generateStory() const;
+	std::wstring generateStory();
 
 	~StoryGenerator();
 
 private:
 
+	struct TokenVisitor {
+
+		StoryGenerator& self;
+
+		std::wstring operator()(const TextToken& txtToken) {
+			return txtToken.getText();
+		}
+
+		std::wstring operator()(const PlaceholderToken& pcToken) {
+
+			return self.evaluatePlaceholder(pcToken);
+		}
+
+	};
+
 	const DataManager& dataManager_;
 	const TemplateManager& templateManager_;
 
+	std::random_device rd_;
+	std::mt19937 engine_;
+
 	const Template& chooseRandomTemplate(const std::vector<Template>& templates) const;
-	std::wstring generateStoryFromTemplate(const Template& randomTemplate) const;
+	std::wstring generateStoryFromTemplate(const Template& randomTemplate);
 
-	void includeTextTokenToStory(const TextToken& txtToken, std::wstring& story) const;
-	void includeTextToStory(const std::wstring& text, std::wstring& story) const;
-
-	bool placeholderInCache(const PlaceholderToken& token) const;
-	void addPlaceholderToCache(const PlaceholderToken& token) const;
 	std::wstring evaluatePlaceholder(const PlaceholderToken& token) const;
-
-	void cachePlaceholderTokenValue(const PlaceholderToken& token, const std::wstring& text) const;
-	const std::wstring& getPlaceholderTextValueFromCache(const PlaceholderToken& token) const;
 
 };
 
 using TemplateToken = std::variant<PlaceholderToken, TextToken>;
+
